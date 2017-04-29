@@ -172,9 +172,9 @@ public class SchedulingProblem
 		rooms           = new Room       [ listRooms      .size() + 1 ]              ;
 		instructors     = new Instructor [ listInstructors.size() + 1 ]              ;
 		courses         = new Course     [ listCourses    .size() + 1 ]              ;
-		hypothesis      = new int        [ numOfHypothesis][listCourses.size() + 1 ] ;  //start from index 1 // index zero is null
-		flag        = new int     [ numOfHypothesis][listSlots  .size() + 1 ] ;
-		schedule       = new String     [ numOfHypothesis ] [ listSlots  .size() + 1 ][ listRooms .size() + 1 ] ;
+		hypothesis      = new int        [ numOfHypothesis ] [ listCourses.size() + 1 ] ;  //start from index 1 // index zero is null
+		flag            = new int        [ numOfHypothesis ] [ listSlots  .size() + 1 ] ;
+		schedule        = new String     [ numOfHypothesis ] [ listSlots  .size() + 1 ][ listRooms .size() + 1 ] ;
 		fitnessValue    = new int        [ numOfHypothesis                         ] ;
 		fitnessValidity = new int        [ numOfHypothesis                         ] ;
 
@@ -513,12 +513,11 @@ public class SchedulingProblem
 	{
 		schedule = new String[ numOfHypothesis ][ slotsSize ][ roomsSize ] ;
 		
-		int id = 1;         //indicates the id of course
-		int i  = 1;         //index of slots
-		int r  = 1;         //index of room
-		int j  = 1;         //index of courses
-		//  h  = 1;         //index of hypothesis
-		int checkFlag = 0;  // 0 means course not scheduled
+		int id        = 1;         // indicates the id of course
+		int i         = 1;         // index of slots
+		int r         = 1;         // index of room
+		int j         = 1;         // index of courses 
+		int checkFlag = 0;         // 0 means course not scheduled
 		
 		// delete schedule arraylist
 		for(int h = 1 ; h < numOfHypothesis ; h++)
