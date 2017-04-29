@@ -1,6 +1,6 @@
 Course Scheduling with Genetic Algorithm in Java.
 
-You can find here the original genetic algorithm of course scheduling problem.
+You can find here the original problem of course scheduling.
 
 The main issue:
 
